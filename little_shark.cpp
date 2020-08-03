@@ -3,15 +3,15 @@
 using namespace std;
 
 int main() {
-	// input ÆÄÀÏ ¿¬°á
+	// input ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	ifstream fin("C:\\Users\\USER\\Desktop\\input.txt");
 	if (!fin) {
 		cout << "err" << endl; return 0;
 	}
-	// field size ÀÔ·Â
+	// field size ï¿½Ô·ï¿½
 	int f_size;
 	fin >> f_size;
-	// field »ý¼º ¹× ÃÊ±âÈ­
+	// field ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ê±ï¿½È­
 	int **field = new int*[f_size];
 	for (int i = 0; i < f_size; i++) {
 		field[i] = new int[f_size];
@@ -21,12 +21,10 @@ int main() {
 			fin >> field[i][j];
 		}
 	}
-	// field Ãâ·Â
+	// field ï¿½ï¿½ï¿½
 	for (int i = 0; i < f_size; i++) {
 		for (int j = 0; j < f_size; j++) {
 			cout << field[i][j] << ' ';
 		} cout << endl;
 	}
-
-
 }
