@@ -3,15 +3,15 @@
 using namespace std;
 
 int main() {
-	// input ���� ����
+	// input file connection
 	ifstream fin("C:\\Users\\USER\\Desktop\\input.txt");
 	if (!fin) {
 		cout << "err" << endl; return 0;
 	}
-	// field size �Է�
+	// get field size 
 	int f_size;
 	fin >> f_size;
-	// field ���� �� �ʱ�ȭ
+	// make and initialize field
 	int **field = new int*[f_size];
 	for (int i = 0; i < f_size; i++) {
 		field[i] = new int[f_size];
@@ -21,7 +21,7 @@ int main() {
 			fin >> field[i][j];
 		}
 	}
-	// field ���
+	// print field
 	for (int i = 0; i < f_size; i++) {
 		for (int j = 0; j < f_size; j++) {
 			cout << field[i][j] << ' ';
